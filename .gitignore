@@ -1,2 +1,11 @@
 *.jpg
 *.png
+saved_networks/*
+*.generator
+*.discriminator
+*.gen
+*.disc
+*.g
+*.d
+*.network
+*.net
