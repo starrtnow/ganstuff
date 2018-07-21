@@ -52,10 +52,8 @@ class Gen(nn.Module):
 
 class Disc(nn.Module):
     
-    def __init__(self, batch_size):
+    def __init__(self):
         super(Disc, self).__init__()
-
-        self.batch = batch_size
 
         self.main = nn.Sequential(
             nn.Conv2d(NC, NDF, 4, 2, 1, bias=True),
