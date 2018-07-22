@@ -7,8 +7,8 @@ def download_raw_dataset(tag, n_images = 1000, directory = "data/raw", download_
     arg_images = ["--range", "{}".format(n_images)]
     arg_url = [download_url.format(tag)]
     arg_directory = ["-d", "{}".format(directory)]
-    args = ["gallery-dl"] + arg_images + arg_directory + arg_url
-    return run(args, shell=True, check=True)
+    args = ["gallery-dl"] + arg_images + arg_directory +  arg_url
+    return run(args, shell=False, check=False)
 
 def convert_to_faces(tag, in_directory="data/raw/danbooru", out_directory = "data/faces/danbooru"):
     full_in = os.path.join(in_directory, tag)
